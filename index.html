@@ -6,18 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>Inicio - Victoria Vesna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
-<body>
-    <div>
+<body class="bg-primary d-inline-block">
+    <div class="container text-center bg-light align-self-center border border-info border-5 rounded-1 shadow p-4 m-5" >
         <head>
-            <h1>Victoria Vesna</h1>
+            <h1 class="border-bottom border-1 border-dark fs-1 fw-bold">Victoria Vesna</h1>
         </head>
         <main>
             <h2>Home</h2>
-            <nav>
-                <div class="acercade"></div>
-                <div class="galeria"></div>
-                <div class="contacto"></div>
+            <nav class="container d-flex grid p-2">
+                <a href="acercade.html">
+                    <div class="g-col-4">
+                    <img src="images/VV2013.jpeg" alt="Victoria Vesna preformando octupus mandala" >
+                    <h4>Acerca de</h4>
+                </div>
+                </a>
+                <a href="galeria.html">
+                    <div class="carousel slide g-col-4 p-2" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="images/000001.jpg" class="d-block g-col-4" alt="..." >
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/000002.jpg" class="d-block g-col-4" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="images/000003.jpg" class="d-block g-col-4" alt="...">
+                        </div>
+                      </div>
+                      <h3>Galería</h3>
+                    </div>
+                </a>
+                <a href="contacto.html">
+                    <div class="g-col-4 grid p-2">
+                    <img class="g-col-12 max-width" src="images/000004.jpg" alt="Victoria Vesna en pantalla de televisor" >
+                    <h4>Contacto</h>
+                </div>
+                </a>
             </nav>
         </main>
         <footer>
