@@ -6,20 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>contacto - Victoria Vesna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script>
+        function validarform(){
+            if (document.formulario.nombre.value.length==0){ 
+      	 alert("¡Ingrese un nombre!") 
+      	 document.formulario.nombre.focus() 
+      	 return false; 
+            }
+           var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+	       valor = document.getElementById("email").value;
+	        if( !(ck_email.test(valor)) ) {
+ 	       alert("Email debe contener un email")
+ 	       return false;
+	       }
+         alert("Muchas gracias por enviar el formulario"); 
+   	     document.correo.submit();
+        }
+    </script>
 </head>
-<body>
-    <div>
-        <head>
-            <h1>Victoria Vesna</h1>
-        </head>
-        <main>
-            <nav>
-                <div class="inicio"><a href="index.html">Inicio/a></div>
-                <div class="acercade"><a href="acercade.html">Acerca de Victoria</a></div>
-                <div class="galeria"><a href="galeria.html">Galeria</a></div>
-                <div class="contacto"><a href="#">contacto</a></div>
+<body class="bg-primary d-inline-block">
+    <div class="container text-center bg-light align-self-center border border-info border-5 rounded-1 shadow p-4 m-5">
+        <header>
+            <h1 class="border-bottom border-1 border-dark fs-1 fw-bold">Victoria Vesna</h1>
+        </header>
+        <main class="grid">
+            <nav class="col-12 border-bottom border-1 border-dark p-2">
+                <ul>
+                    <li class="d-inline-block m-2"><a href="index.html" class="text-decoration-none text-dark">Inicio</a></li>
+                    <li class="d-inline-block m-2"><a href="acercade.html" class="text-decoration-none text-dark">Acerca de Victoria</a></li>
+                    <li class="d-inline-block m-2"><a href="galeria.html" class="text-decoration-none text-dark">Galeria</a</li>
+                    <li class="d-inline-block m-2"><a href="#" class="text-decoration-none text-dark">contacto</a></li>
+                </ul>
             </nav>
-            <h2>contacto</h2>
+            <h2 class="p-3">Contacto</h2>
+            <div class="container"></div>
+            <article class="col-3 m-4 d-inline-block">
+                    <a class="btn btn-secondary m-2" href="https://www.instagram.com/victoriavesna/" role="button">Instagram</a>
+                    <a class="btn btn-secondary m-2" href="https://www.instagram.com/victoriavesna/" role="button">Sitio Web</a>
+                    <a class="btn btn-secondary m-2" href="http://artsci.ucla.edu/" role="button">ART | SCI</a>
+            </article>
+            <aside class="card col-4 m-4 d-inline-block p-3">
+                <form action method="post" name="correo" id="correo">
+                    <label for="Nombre" class="form-label m-2">Nombre*</label>
+                    <input type="text" name="Nombre" id="nombre" class="form-control v">
+                    <label for="email" class="form-label m-2">E-mail*</label>
+                    <input type="email" name="email" id="email" class="form-control m-2">
+                    <button type="submit" name="enviar" id="enviar" value="enviar" onclick="validarform()" class="btn btn-info m-2">Enviar</button>
+                </form>
+            </aside>
         </main>
         <footer>
             <address>Página web creada y diseñada por <a href="estudiantes.html">Valeria Abbate y Matías Marmol</a></address>
